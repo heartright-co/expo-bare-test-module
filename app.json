@@ -1,0 +1,12 @@
+{
+  "name": "pnuu-bare-workflow",
+  "displayName": "pnuu-bare-workflow",
+  "expo": {
+    "name": "pnuu-bare-workflow",
+    "slug": "pnuu-bare-workflow",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
