@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, AppState } from 'react-native';
 
-export default function TossAfterSubmit({ navigation }) {
+export default function TossAfterSubmit({ navigation, route }) {
+  const { AppStateWatcher } = route.params;
   const onClick = () => {
+    AppStateWatcher.removeOnChangeListener();
     navigation.goBack();
   };
   return (
