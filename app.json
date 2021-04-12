@@ -5,11 +5,10 @@
     "name": "pnuu-bare-workflow",
     "slug": "pnuu-bare-workflow",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "bundleIdentifier": "bare.workflow.test"
-    }
+    },
+    "owner": "pnuu-heartright"
   }
 }
