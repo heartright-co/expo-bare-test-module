@@ -1,21 +1,37 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
-import {purchaseItemAsync} from 'expo-in-app-purchases'
+import Purchases from 'react-native-purchases';
 
-export default function InAppPurchaseItem({item}) {
+export default function InAppPurchaseItem({ item }) {
+  const { title, price_string } = item.product;
+
+  const onPressBuyHandler = async () => {
+    // try {
+    const {
+      purchaserInfo,
+      productIdentifier,
+    } = await Purchases.purchasePackage(item);
+    console.log(`purchaseInfo`, purchaserInfo);
+    console.log(`productIdentifier`, productIdentifier);
+    if (
+      typeof purchaserInfo.entitlements.active.subscription_1 !== 'undefined'
+    ) {
+      console.log('unlock the product!');
+    }
+    // } catch (e) {
+    // if (!e.userCancelled) {
+    //   console.log('error', e);
+    // } else {
+    //   console.log('userCanceled!');
+    // }
+    // }
+  };
   return (
-    <View key={item.productId}>
-      <Text style={styles.itemTitle}>{item.title}</Text>
-      <Text>Description: {item.description}</Text>
-      <Text>Price: {item.price}</Text>
-      <Text>Currency Code: {item.priceCurrencyCode}</Text>
-      <Text>Price Amount Micros: {item.priceAmountMicros}</Text>
-      <Text>Product ID: {item.productId}</Text>
-      <Text>Type: {item.type}</Text>
-      <Text>Subscription Period: {item.subscriptionPeriod}</Text>
-      <View style={styles.buttonContainer}>
-        <Button title="Buy" onPress={() => purchaseItemAsync(item.productId)} />
-      </View>
+    <View>
+      <Text>{title}</Text>
+      <Text>{price_string}</Text>
+      <View style={styles.buttonContainer}></View>
+      <Button title="Buy" onPress={onPressBuyHandler} />
     </View>
   );
 }

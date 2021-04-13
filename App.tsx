@@ -4,7 +4,10 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Navigation from './src/navigation';
 import TossForm from './src/pages/TossForm';
 
+import { useConfigurePurchase } from './src/hooks/useConfigurePurchase';
+
 export default function App() {
+  useConfigurePurchase();
   return (
     <SafeAreaProvider>
       <Navigation />
