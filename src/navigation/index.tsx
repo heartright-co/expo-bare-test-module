@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TossFormPage from '../pages/TossForm';
 import TossAfterSubmit from '../pages/TossAfterSubmit';
 import InAppPurchase from '../pages/InAppPurchase';
+import ContactPage from '../pages/Contact/ContactPage';
 
 export default function Navigation() {
   return (
@@ -27,6 +28,7 @@ const RootNavigator = () => {
         name="InAppPurchaseNavigator"
         component={InAppPurcahseNavigator}
       />
+      <BottomTab.Screen name="ContactNavigator" component={ContactNavigator} />
     </BottomTab.Navigator>
   );
 };
@@ -43,6 +45,14 @@ const InAppPurcahseNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="InAppPurchase" component={InAppPurchase} />
+    </Stack.Navigator>
+  );
+};
+
+const ContactNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="ContactPage" component={ContactPage} />
     </Stack.Navigator>
   );
 };
