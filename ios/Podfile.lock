@@ -60,6 +60,11 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
+  - Purchases (3.10.7):
+    - PurchasesCoreSwift (= 3.10.7)
+  - PurchasesCoreSwift (3.10.7)
+  - PurchasesHybridCommon (1.6.2):
+    - Purchases (= 3.10.7)
   - RCTRequired (0.63.4)
   - RCTTypeSafety (0.63.4):
     - FBLazyVector (= 0.63.4)
@@ -292,6 +297,9 @@ PODS:
     - React
   - RNGestureHandler (1.10.3):
     - React-Core
+  - RNPurchases (4.1.1):
+    - PurchasesHybridCommon (= 1.6.2)
+    - React-Core
   - RNReanimated (2.1.0):
     - DoubleConversion
     - FBLazyVector
@@ -388,6 +396,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNPurchases (from `../node_modules/react-native-purchases`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - UMAppLoader (from `../node_modules/unimodules-app-loader/ios`)
@@ -408,6 +417,9 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - boost-for-react-native
+    - Purchases
+    - PurchasesCoreSwift
+    - PurchasesHybridCommon
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -496,6 +508,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/masked-view"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNPurchases:
+    :path: "../node_modules/react-native-purchases"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
@@ -551,6 +565,9 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: f2c97f2529dd79c083355182cc158c9f98f4bd6e
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
+  Purchases: b8b8fb6e856ac8166e217f6e014df894d821dda1
+  PurchasesCoreSwift: 8ae0f08e020f0bc97c1befa4e38a0dbc8e9732e0
+  PurchasesHybridCommon: 5f5c1c245b12fc5e8760af7d11cb10f888109a9b
   RCTRequired: 082f10cd3f905d6c124597fd1c14f6f2655ff65e
   RCTTypeSafety: 8c9c544ecbf20337d069e4ae7fd9a377aadf504b
   React: b0a957a2c44da4113b0c4c9853d8387f8e64e615
@@ -574,6 +591,7 @@ SPEC CHECKSUMS:
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
+  RNPurchases: ffe3b7fd393642f35695907947f2cdb84b282ebb
   RNReanimated: 70f662b5232dd5d19ccff581e919a54ea73df51c
   RNScreens: 3ba2198ca3179f77f6158425fc31ba3c90a0d49f
   UMAppLoader: 92d044af52626af3d81a69796ad666fc7a9a7d78
